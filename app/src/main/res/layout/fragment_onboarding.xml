@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomBarGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:padding="8dp"
+        android:text="@string/onboarding_skip"
+        android:textColor="@color/primary_dark"
+        android:textSize="14sp"
+        android:textFontWeight="600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/nextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nextButton">
+
+        <View
+            android:id="@+id/dot1"
+            android:layout_width="@dimen/dot_width_active"
+            android:layout_height="@dimen/dot_height"
+            android:background="@drawable/bg_dot_active" />
+
+        <View
+            android:id="@+id/dot2"
+            android:layout_width="@dimen/dot_width_inactive"
+            android:layout_height="@dimen/dot_height"
+            android:layout_marginStart="@dimen/dot_gap"
+            android:background="@drawable/bg_dot_inactive" />
+
+        <View
+            android:id="@+id/dot3"
+            android:layout_width="@dimen/dot_width_inactive"
+            android:layout_height="@dimen/dot_height"
+            android:layout_marginStart="@dimen/dot_gap"
+            android:background="@drawable/bg_dot_inactive" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_button_primary"
+        android:minWidth="124dp"
+        android:text="@string/onboarding_next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomBarGuide" />
+</androidx.constraintlayout.widget.ConstraintLayout>
