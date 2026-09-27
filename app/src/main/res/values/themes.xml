@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Основная тема приложения (дизайн только светлый) -->
+    <style name="Theme.DriveNext" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <!-- Тема SplashScreen: показывается системой при старте, затем переключается на Theme.DriveNext -->
+    <style name="Theme.DriveNext.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.DriveNext</item>
+    </style>
+</resources>
