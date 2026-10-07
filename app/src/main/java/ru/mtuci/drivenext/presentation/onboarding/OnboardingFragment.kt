@@ -61,6 +61,6 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
     private fun finishOnboarding() {
         viewModel.complete() // запоминаем: повторно не показывать
-        (requireActivity() as Navigator).navigate(StartDestination.Login)
+        (requireActivity() as Navigator).navigate(StartDestination.Welcome)
     }
 }

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), Navigator {
         val fragment = when (destination) {
             StartDestination.NoConnection -> NoConnectionFragment()
             StartDestination.Onboarding -> OnboardingFragment()
-            StartDestination.Login -> StubFragment.newInstance(R.string.stub_login)
+            StartDestination.Welcome -> StubFragment.newInstance(R.string.stub_login)
             StartDestination.Home -> StubFragment.newInstance(R.string.stub_home)
         }
         show(fragment)
