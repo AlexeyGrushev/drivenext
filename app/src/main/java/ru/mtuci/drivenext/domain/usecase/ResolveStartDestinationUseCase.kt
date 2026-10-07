@@ -10,10 +10,10 @@ class ResolveStartDestinationUseCase(
     private val onboardingRepository: OnboardingRepository,
     private val sessionRepository: SessionRepository,
 ) {
-    operator fun invoke(): StartDestination = when {
+    suspend operator fun invoke(): StartDestination = when {
         !networkChecker.isOnline() -> StartDestination.NoConnection
         !onboardingRepository.isCompleted() -> StartDestination.Onboarding
         sessionRepository.hasValidSession() -> StartDestination.Home
-        else -> StartDestination.Login
+        else -> StartDestination.Welcome
     }
 }
