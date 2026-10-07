@@ -5,6 +5,7 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:fontFamily">@font/montserrat</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.DriveNext.Dialog</item>
         <item name="fontFamily">@font/montserrat</item>
     </style>
 
@@ -13,5 +14,14 @@
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.DriveNext</item>
+    </style>
+
+    <style name="ThemeOverlay.DriveNext.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.DriveNext.Dialog</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.DriveNext.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
     </style>
 </resources>

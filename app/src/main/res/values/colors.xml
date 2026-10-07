@@ -5,5 +5,14 @@
     <color name="primary_dark">#FF2A1246</color>
     <color name="text_primary">#FF1A1A1A</color>
     <color name="text_secondary">#FF4A4A4A</color>
+    <color name="text_label">#FF404040</color>
+    <color name="text_hint">#FF667085</color>
+    <color name="text_gray_700">#FF344054</color>
+    <color name="title_navy">#FF101828</color>
+    <color name="stroke">#FFD0D5DD</color>
     <color name="dot_inactive">#FFE6E7EB</color>
+    <color name="error">#FFEA4335</color>
+    <color name="screen_tint">#FFF9F5FF</color>
+    <color name="avatar_bg">#FFEEEEEE</color>
+    <color name="disabled_primary">#662A1246</color>
 </resources>

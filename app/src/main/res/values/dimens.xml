@@ -5,4 +5,6 @@
     <dimen name="dot_width_active">40dp</dimen>
     <dimen name="dot_width_inactive">16dp</dimen>
     <dimen name="dot_gap">8dp</dimen>
+    <dimen name="screen_margin">24dp</dimen>
+    <dimen name="field_height">44dp</dimen>
 </resources>

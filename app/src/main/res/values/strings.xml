@@ -2,10 +2,12 @@
     <string name="app_name">DriveNext</string>
     <string name="splash_slogan">Поможем найти твою следующую поездку</string>
 
+    <!-- Нет подключения -->
     <string name="no_connection_title">Нет подключения к интернету</string>
     <string name="no_connection_subtitle">Проверьте подключение и повторите попытку</string>
     <string name="no_connection_retry">Повторить попытку</string>
 
+    <!-- Онбординг -->
     <string name="onboarding_skip">Пропустить</string>
     <string name="onboarding_next">Далее</string>
     <string name="onboarding_go">Поехали</string>
@@ -16,6 +18,123 @@
     <string name="onboarding_3_title">Лучшие предложения</string>
     <string name="onboarding_3_text">Выбирай понравившееся среди сотен доступных автомобилей</string>
 
-    <string name="stub_login">Экран входа</string>
+    <!-- Общие -->
+    <string name="action_next">Далее</string>
+    <string name="action_back">Назад</string>
+    <string name="action_retry">Повторить</string>
+    <string name="action_ok">ОК</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="dialog_error_title">Ошибка</string>
+    <string name="coming_soon">Этот раздел появится в следующих версиях</string>
+
+    <!-- Вход / регистрация (Getting started) -->
+    <string name="welcome_login">Войти</string>
+    <string name="welcome_register">Зарегистрироваться</string>
+
+    <!-- Вход в аккаунт -->
+    <string name="login_title">Войдите в аккаунт</string>
+    <string name="login_subtitle">Пожалуйста, введите свои данные</string>
+    <string name="label_email">Электронная почта</string>
+    <string name="hint_email">Введите электронную почту</string>
+    <string name="label_password">Пароль</string>
+    <string name="hint_password">Введите пароль</string>
+    <string name="login_forgot_password">Забыли пароль?</string>
+    <string name="login_sign_in">Войти</string>
+    <string name="login_google">Войти через Google</string>
+    <string name="login_register">Зарегистрироваться</string>
+
+    <!-- Регистрация -->
+    <string name="signup_title">Создать аккаунт</string>
+    <string name="signup_password_new">Придумайте пароль</string>
+    <string name="signup_password_repeat">Повторите пароль</string>
+    <string name="signup_agree">Я согласен с условиями обслуживания и политикой конфиденциальности</string>
+    <string name="label_last_name">Фамилия</string>
+    <string name="hint_last_name">Введите фамилию</string>
+    <string name="label_first_name">Имя</string>
+    <string name="hint_first_name">Введите имя</string>
+    <string name="label_middle_name">Отчество</string>
+    <string name="hint_middle_name">Введите отчество</string>
+    <string name="label_birth_date">Дата рождения</string>
+    <string name="hint_date">DD/MM/YYYY</string>
+    <string name="label_gender">Пол</string>
+    <string name="gender_male">Мужской</string>
+    <string name="gender_female">Женский</string>
+    <string name="signup_avatar_hint">Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину</string>
+    <string name="label_license_number">Номер водительского удостоверения</string>
+    <string name="hint_license_number">0000000000</string>
+    <string name="label_license_date">Дата выдачи</string>
+    <string name="label_license_photo">Загрузите фото водительского удостоверения</string>
+    <string name="label_passport_photo">Загрузите фото паспорта</string>
+    <string name="upload_photo">Загрузить фото</string>
+    <string name="photo_uploaded">Фото загружено</string>
+    <string name="photo_source_title">Добавить фото</string>
+    <string name="photo_source_gallery">Выбрать из галереи</string>
+    <string name="photo_source_camera">Сделать снимок</string>
+    <string name="date_picker_title">Выбор даты</string>
+    <string name="content_description_back">Назад</string>
+    <string name="content_description_calendar">Выбрать дату</string>
+
+    <!-- Сообщения об ошибках (из ТЗ) -->
+    <string name="error_email_invalid">Введите корректный адрес электронной почты.</string>
+    <string name="error_password_required">Введите пароль.</string>
+    <string name="error_password_short">Пароль должен содержать не менее 6 символов.</string>
+    <string name="error_passwords_mismatch">Пароли не совпадают.</string>
+    <string name="error_agree_required">Необходимо согласиться с условиями обслуживания и политикой конфиденциальности.</string>
+    <string name="error_fill_required">Пожалуйста, заполните все обязательные поля.</string>
+    <string name="error_birth_date_invalid">Введите корректную дату рождения.</string>
+    <string name="error_issue_date_invalid">Введите корректную дату выдачи.</string>
+    <string name="error_license_number_invalid">Номер удостоверения должен состоять из 10 цифр.</string>
+    <string name="error_photos_required">Пожалуйста, загрузите все необходимые фото.</string>
+    <string name="error_search_failed">Не удалось выполнить поиск. Попробуйте снова.</string>
+    <string name="error_load_failed">Не удалось загрузить данные. Попробуйте снова.</string>
+    <string name="error_gender_required">Выберите пол.</string>
+
+    <!-- Успешная регистрация -->
+    <string name="success_screen_title">Пользуйтесь с удовольствием</string>
+    <string name="success_title">Поздравляем</string>
+    <string name="success_text">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
+
+    <!-- Главная -->
+    <string name="home_search_hint">Введите марку автомобиля</string>
+    <string name="home_title">Давайте найдем автомобиль</string>
+    <string name="car_price_format">%1$d₽</string>
+    <string name="car_per_day">в день</string>
+    <string name="car_book">Забронировать</string>
+    <string name="car_details">Детали</string>
+    <string name="search_loading">Ищем подходящие автомобили</string>
+    <string name="search_results_title">Результаты поиска</string>
+    <string name="search_empty">По вашему запросу ничего не найдено</string>
+    <string name="cars_empty">Пока нет доступных автомобилей</string>
+
+    <!-- Нижнее меню -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_bookings">Брони</string>
+    <string name="nav_settings">Настройки</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_my_bookings">Мои бронирования</string>
+    <string name="settings_theme">Тема</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_connect_car">Подключить свой автомобиль</string>
+    <string name="settings_help">Помощь</string>
+    <string name="settings_invite">Пригласи друга</string>
+
+    <!-- Профиль -->
+    <string name="profile_title">Профиль</string>
+    <string name="profile_joined_format">Присоединился в %1$s %2$d</string>
+    <string name="profile_email">Электронная почта</string>
+    <string name="profile_password">Пароль</string>
+    <string name="profile_change_password">Поменять пароль</string>
+    <string name="profile_gender">Пол</string>
+    <string name="profile_google">Google</string>
+    <string name="profile_logout">Выйти из профиля</string>
+    <string name="profile_avatar_updated">Аватар обновлён</string>
+
+    <!-- Заглушки будущих экранов -->
     <string name="stub_home">Главный экран</string>
+    <string name="stub_bookings">Мои бронирования (появятся в следующих ЛР)</string>
+    <string name="stub_booking_checkout">Оформление аренды (появится в следующих ЛР)</string>
+    <string name="stub_car_details">Детали автомобиля (появятся в следующих ЛР)</string>
+    <string name="stub_add_car">Добавление автомобиля (появится в следующих ЛР)</string>
 </resources>
