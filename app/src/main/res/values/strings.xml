@@ -137,4 +137,24 @@
     <string name="stub_booking_checkout">Оформление аренды (появится в следующих ЛР)</string>
     <string name="stub_car_details">Детали автомобиля (появятся в следующих ЛР)</string>
     <string name="stub_add_car">Добавление автомобиля (появится в следующих ЛР)</string>
+
+    <string-array name="months_prepositional">
+        <item>январе</item>
+        <item>феврале</item>
+        <item>марте</item>
+        <item>апреле</item>
+        <item>мае</item>
+        <item>июне</item>
+        <item>июле</item>
+        <item>августе</item>
+        <item>сентябре</item>
+        <item>октябре</item>
+        <item>ноябре</item>
+        <item>декабре</item>
+    </string-array>
+    <string name="gender_not_set">Не указан</string>
+    <string name="google_not_linked">Не подключён</string>
+    <string name="content_description_avatar">Аватар</string>
+    <string name="content_description_car">Фото автомобиля</string>
+    <string name="logout_loading">Выходим…</string>
 </resources>
