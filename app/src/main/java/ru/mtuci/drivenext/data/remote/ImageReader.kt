@@ -15,8 +15,10 @@ class ImageReader(private val context: Context) {
         val uri = Uri.parse(uriString)
         val resolver = context.contentResolver
         val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-        resolver.openInputStream(uri)?.use { BitmapFactory.decodeStream(it, null, bounds) }
+        // С inJustDecodeBounds decodeStream всегда возвращает null — читаем только размеры в bounds
+        val stream = resolver.openInputStream(uri)
             ?: throw AppException("Не удалось открыть выбранное фото.")
+        stream.use { BitmapFactory.decodeStream(it, null, bounds) }
 
         val sample = max(1, max(bounds.outWidth, bounds.outHeight) / maxSide)
         val options = BitmapFactory.Options().apply { inSampleSize = sample }
