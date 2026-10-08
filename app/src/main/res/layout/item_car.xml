@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/bg_card_outline"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/carModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/TextAppearance.DriveNext.CardTitle"
+        app:layout_constraintEnd_toStartOf="@id/carImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="S 500 Sedan" />
+
+    <TextView
+        android:id="@+id/carBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/TextAppearance.DriveNext.CardBrand"
+        app:layout_constraintEnd_toStartOf="@id/carImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carModel"
+        tools:text="Mercedes-Benz" />
+
+    <TextView
+        android:id="@+id/carPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/TextAppearance.DriveNext.CardPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carBrand"
+        tools:text="2500₽" />
+
+    <TextView
+        android:id="@+id/carPerDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/car_per_day"
+        style="@style/TextAppearance.DriveNext.CardBrand"
+        app:layout_constraintBaseline_toBaselineOf="@id/carPrice"
+        app:layout_constraintStart_toEndOf="@id/carPrice" />
+
+    <ImageView
+        android:id="@+id/transmissionIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_transmission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carPrice" />
+
+    <TextView
+        android:id="@+id/carTransmission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        style="@style/TextAppearance.DriveNext.CardSpec"
+        app:layout_constraintBottom_toBottomOf="@id/transmissionIcon"
+        app:layout_constraintStart_toEndOf="@id/transmissionIcon"
+        app:layout_constraintTop_toTopOf="@id/transmissionIcon"
+        tools:text="A/T" />
+
+    <ImageView
+        android:id="@+id/fuelIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_fuel"
+        app:layout_constraintBottom_toBottomOf="@id/transmissionIcon"
+        app:layout_constraintStart_toEndOf="@id/carTransmission"
+        app:layout_constraintTop_toTopOf="@id/transmissionIcon" />
+
+    <TextView
+        android:id="@+id/carFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        style="@style/TextAppearance.DriveNext.CardSpec"
+        app:layout_constraintBottom_toBottomOf="@id/transmissionIcon"
+        app:layout_constraintStart_toEndOf="@id/fuelIcon"
+        app:layout_constraintTop_toTopOf="@id/transmissionIcon"
+        tools:text="Бензин" />
+
+    <ImageView
+        android:id="@+id/carImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/content_description_car"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/carPrice"
+        app:layout_constraintDimensionRatio="176:136"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bookButton"
+        style="@style/Widget.DriveNext.Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/car_book"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/detailsButton"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transmissionIcon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/detailsButton"
+        style="@style/Widget.DriveNext.Button.Outlined"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="8dp"
+        android:text="@string/car_details"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/bookButton"
+        app:layout_constraintTop_toTopOf="@id/bookButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

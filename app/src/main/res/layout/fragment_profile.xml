@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/content_description_back"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/profile_title"
+                style="@style/TextAppearance.DriveNext.ScreenTitle"
+                android:textColor="@color/title_navy" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatarImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/content_description_avatar"
+                android:padding="1.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_circle"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.DriveNext.Circle"
+                app:strokeColor="@color/primary_dark"
+                app:strokeWidth="1.5dp" />
+
+            <ImageView
+                android:id="@+id/avatarEditBadge"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|end"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_add_badge" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/avatarProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:indicatorColor="@color/primary_dark" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            style="@style/TextAppearance.DriveNext.Title" />
+
+        <TextView
+            android:id="@+id/joinedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            style="@style/TextAppearance.DriveNext.Body" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/Widget.DriveNext.ProfileRow">
+
+                <TextView
+                    style="@style/Widget.DriveNext.ProfileRowLabel"
+                    android:text="@string/profile_email" />
+
+                <TextView
+                    android:id="@+id/emailValue"
+                    style="@style/Widget.DriveNext.ProfileRowValue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/passwordRow"
+                style="@style/Widget.DriveNext.ProfileRow">
+
+                <TextView
+                    style="@style/Widget.DriveNext.ProfileRowLabel"
+                    android:text="@string/profile_password" />
+
+                <TextView
+                    style="@style/Widget.DriveNext.ProfileRowValue"
+                    android:text="@string/profile_change_password"
+                    android:textColor="@color/primary_dark" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Widget.DriveNext.ProfileRow">
+
+                <TextView
+                    style="@style/Widget.DriveNext.ProfileRowLabel"
+                    android:text="@string/profile_gender" />
+
+                <TextView
+                    android:id="@+id/genderValue"
+                    style="@style/Widget.DriveNext.ProfileRowValue" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Widget.DriveNext.ProfileRow">
+
+                <TextView
+                    style="@style/Widget.DriveNext.ProfileRowLabel"
+                    android:text="@string/profile_google" />
+
+                <TextView
+                    android:id="@+id/googleValue"
+                    style="@style/Widget.DriveNext.ProfileRowValue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logoutRow"
+                style="@style/Widget.DriveNext.ProfileRow"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/logoutText"
+                    style="@style/Widget.DriveNext.ProfileRowLabel"
+                    android:text="@string/profile_logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

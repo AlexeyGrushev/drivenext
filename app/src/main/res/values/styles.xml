@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Текст -->
+    <style name="TextAppearance.DriveNext.Title" parent="android:Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.ScreenTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.Subtitle" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+    <style name="TextAppearance.DriveNext.Label" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_label</item>
+    </style>
+    <style name="TextAppearance.DriveNext.Body" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+    <style name="TextAppearance.DriveNext.Link" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <!-- Кнопки -->
+    <style name="Widget.DriveNext.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/button_primary_tint</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    <style name="Widget.DriveNext.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textColor">@color/text_gray_700</item>
+        <item name="strokeColor">@color/stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="iconTint">@null</item>
+    </style>
+    <style name="Widget.DriveNext.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Поля ввода -->
+    <style name="Widget.DriveNext.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxStrokeColor">@color/box_stroke_color</item>
+        <item name="boxStrokeErrorColor">@color/error</item>
+        <item name="errorTextColor">@color/error</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="startIconTint">@color/text_hint</item>
+        <item name="endIconTint">@color/text_hint</item>
+        <item name="errorTextAppearance">@style/TextAppearance.DriveNext.Error</item>
+    </style>
+    <style name="TextAppearance.DriveNext.Error" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+    <style name="Widget.DriveNext.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!-- Чекбокс и радиокнопка -->
+    <style name="Widget.DriveNext.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_checkbox</item>
+        <item name="buttonTint">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="Widget.DriveNext.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_radio</item>
+        <item name="buttonTint">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <!-- Скругления -->
+    <style name="ShapeAppearanceOverlay.DriveNext.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.DriveNext.Rounded8" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <!-- Экран «Главная» и карточки автомобилей -->
+    <style name="TextAppearance.DriveNext.SectionTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.CardTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.CardBrand" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/stroke</item>
+    </style>
+    <style name="TextAppearance.DriveNext.CardPrice" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.CardSpec" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+    <style name="TextAppearance.DriveNext.MenuItem" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="TextAppearance.DriveNext.UserName" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="TextAppearance.DriveNext.UserEmail" parent="android:Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/stroke</item>
+    </style>
+    <style name="Widget.DriveNext.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="strokeColor">@color/primary_dark</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    <style name="Widget.DriveNext.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">14sp</item>
+        <item name="searchIcon">@drawable/ic_search</item>
+        <item name="queryBackground">@null</item>
+        <item name="submitBackground">@null</item>
+    </style>
+
+    <!-- Строки профиля -->
+    <style name="Widget.DriveNext.ProfileRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:background">@drawable/bg_row_divider</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+    <style name="Widget.DriveNext.ProfileRowLabel" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+    <style name="Widget.DriveNext.ProfileRowValue" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_label</item>
+    </style>
+</resources>
