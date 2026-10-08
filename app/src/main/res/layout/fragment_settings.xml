@@ -15,7 +15,7 @@
             android:layout_height="56dp"
             android:gravity="center"
             android:text="@string/settings_title"
-            android:textAppearance="@style/TextAppearance.DriveNext.ScreenTitle"
+            style="@style/TextAppearance.DriveNext.ScreenTitle"
             android:textColor="@color/title_navy" />
 
         <LinearLayout
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.DriveNext.UserName" />
+                    style="@style/TextAppearance.DriveNext.UserName" />
 
                 <TextView
                     android:id="@+id/userEmail"
@@ -61,7 +61,7 @@
                     android:layout_marginTop="2dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:textAppearance="@style/TextAppearance.DriveNext.UserEmail" />
+                    style="@style/TextAppearance.DriveNext.UserEmail" />
             </LinearLayout>
 
             <ImageView
@@ -96,7 +96,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_my_bookings"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -128,7 +128,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_theme"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -158,7 +158,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_notifications"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -188,7 +188,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_connect_car"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -225,7 +225,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_help"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"
@@ -255,7 +255,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/settings_invite"
-                android:textAppearance="@style/TextAppearance.DriveNext.MenuItem" />
+                style="@style/TextAppearance.DriveNext.MenuItem" />
 
             <ImageView
                 android:layout_width="24dp"

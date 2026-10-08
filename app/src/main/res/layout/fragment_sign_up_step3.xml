@@ -58,14 +58,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/signup_avatar_hint"
-                android:textAppearance="@style/TextAppearance.DriveNext.Body" />
+                style="@style/TextAppearance.DriveNext.Body" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/label_license_number"
-                android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                style="@style/TextAppearance.DriveNext.Label" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/licenseNumberLayout"
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/label_license_date"
-                android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                style="@style/TextAppearance.DriveNext.Label" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/issueDateLayout"
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/label_license_photo"
-                android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                style="@style/TextAppearance.DriveNext.Label" />
 
             <LinearLayout
                 android:id="@+id/licensePhotoRow"
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="@string/upload_photo"
-                    android:textAppearance="@style/TextAppearance.DriveNext.Subtitle" />
+                    style="@style/TextAppearance.DriveNext.Subtitle" />
             </LinearLayout>
 
             <TextView
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/label_passport_photo"
-                android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                style="@style/TextAppearance.DriveNext.Label" />
 
             <LinearLayout
                 android:id="@+id/passportPhotoRow"
@@ -178,7 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:text="@string/upload_photo"
-                    android:textAppearance="@style/TextAppearance.DriveNext.Subtitle" />
+                    style="@style/TextAppearance.DriveNext.Subtitle" />
             </LinearLayout>
 
             <TextView
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/error_photos_required"
-                android:textAppearance="@style/TextAppearance.DriveNext.Error"
+                style="@style/TextAppearance.DriveNext.Error"
                 android:visibility="gone" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

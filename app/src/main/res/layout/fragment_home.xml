@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="@string/home_title"
-            android:textAppearance="@style/TextAppearance.DriveNext.SectionTitle" />
+            style="@style/TextAppearance.DriveNext.SectionTitle" />
     </LinearLayout>
 
     <FrameLayout
