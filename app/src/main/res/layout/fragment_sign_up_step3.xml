@@ -128,12 +128,13 @@
                     android:id="@+id/licensePhotoImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/bg_upload_box"
                     android:contentDescription="@string/upload_photo"
                     android:padding="13dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_upload"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.DriveNext.Rounded8" />
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.DriveNext.Rounded8"
+                    app:strokeColor="@color/text_gray_700"
+                    app:strokeWidth="1dp" />
 
                 <TextView
                     android:id="@+id/licensePhotoText"
@@ -163,12 +164,13 @@
                     android:id="@+id/passportPhotoImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/bg_upload_box"
                     android:contentDescription="@string/upload_photo"
                     android:padding="13dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_upload"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.DriveNext.Rounded8" />
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.DriveNext.Rounded8"
+                    app:strokeColor="@color/text_gray_700"
+                    app:strokeWidth="1dp" />
 
                 <TextView
                     android:id="@+id/passportPhotoText"
