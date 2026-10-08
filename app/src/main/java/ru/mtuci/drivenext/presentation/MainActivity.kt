@@ -85,6 +85,8 @@ class MainActivity : AppCompatActivity(), Navigator {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             replace(R.id.fragmentContainer, fragment)
+            // Без этого системная «Назад» не работает во вложенном стеке (экраны внутри нижнего меню)
+            setPrimaryNavigationFragment(fragment)
         }
     }
 
