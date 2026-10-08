@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/profile_title"
-                android:textAppearance="@style/TextAppearance.DriveNext.ScreenTitle"
+                style="@style/TextAppearance.DriveNext.ScreenTitle"
                 android:textColor="@color/title_navy" />
         </FrameLayout>
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.DriveNext.Title" />
+            style="@style/TextAppearance.DriveNext.Title" />
 
         <TextView
             android:id="@+id/joinedText"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.DriveNext.Body" />
+            style="@style/TextAppearance.DriveNext.Body" />
 
         <LinearLayout
             android:layout_width="match_parent"

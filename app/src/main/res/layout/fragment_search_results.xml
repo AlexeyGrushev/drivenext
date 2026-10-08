@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="@string/search_loading"
-            android:textAppearance="@style/TextAppearance.DriveNext.Body"
+            style="@style/TextAppearance.DriveNext.Body"
             android:textColor="@color/black" />
 
         <com.google.android.material.progressindicator.CircularProgressIndicator

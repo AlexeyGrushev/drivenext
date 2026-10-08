@@ -32,7 +32,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="72dp"
                         android:text="@string/label_email"
-                        android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                        style="@style/TextAppearance.DriveNext.Label" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/emailLayout"
@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/signup_password_new"
-                        android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                        style="@style/TextAppearance.DriveNext.Label" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/passwordLayout"
@@ -80,7 +80,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/signup_password_repeat"
-                        android:textAppearance="@style/TextAppearance.DriveNext.Label" />
+                        style="@style/TextAppearance.DriveNext.Label" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/passwordRepeatLayout"
@@ -115,7 +115,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/error_agree_required"
-                android:textAppearance="@style/TextAppearance.DriveNext.Error"
+                style="@style/TextAppearance.DriveNext.Error"
                 android:visibility="gone" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
