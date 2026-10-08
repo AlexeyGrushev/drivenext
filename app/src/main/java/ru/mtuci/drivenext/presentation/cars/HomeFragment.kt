@@ -50,7 +50,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 binding.progress.isVisible = state.isLoading && !showList
                 binding.refresh.isVisible = showList || state.isLoading
                 binding.states.errorContainer.isVisible = state.errorMessage != null && !state.isLoading
-                binding.states.errorText.text = state.errorMessage ?: getString(R.string.error_load_failed)
+                binding.states.errorText.setText(R.string.error_load_failed)
                 binding.states.emptyText.isVisible = showList && state.cars.isEmpty() && !state.isLoading
                 binding.states.emptyText.setText(R.string.cars_empty)
                 adapter.submitList(state.cars)
