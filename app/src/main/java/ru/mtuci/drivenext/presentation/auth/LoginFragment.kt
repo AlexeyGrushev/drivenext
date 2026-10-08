@@ -2,6 +2,7 @@ package ru.mtuci.drivenext.presentation.auth
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -38,6 +39,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding.googleButton.progressColorRes = R.color.primary_dark
         binding.googleButton.setOnClickListener { viewModel.onGoogleClick() }
         binding.registerButton.setOnClickListener { navigator.openSignUpStep1() }
+
+        // Стрелка «Назад» нужна, только если есть предыдущий экран (пришли с «Вход/регистрация»).
+        // После выхода из профиля вход — корневой экран, и возвращаться некуда.
+        binding.backButton.isVisible = parentFragmentManager.backStackEntryCount > 0
+        binding.backButton.setOnClickListener { navigator.back() }
         binding.forgotPassword.setOnClickListener {
             Snackbar.make(binding.root, R.string.coming_soon, Snackbar.LENGTH_SHORT).show()
         }
