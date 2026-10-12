@@ -2,6 +2,7 @@ package ru.mtuci.drivenext.presentation.main
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
@@ -20,7 +21,11 @@ import ru.mtuci.drivenext.presentation.stub.StubFragment
  */
 class MainFragment : Fragment(R.layout.fragment_main), MainNavigator {
 
-    private enum class Tab { HOME, BOOKINGS, SETTINGS }
+    private enum class Tab(@IdRes val menuId: Int) {
+        HOME(R.id.nav_home),
+        BOOKINGS(R.id.nav_bookings),
+        SETTINGS(R.id.nav_settings),
+    }
 
     private var binding: FragmentMainBinding? = null
     private var currentTab = Tab.HOME
@@ -31,11 +36,25 @@ class MainFragment : Fragment(R.layout.fragment_main), MainNavigator {
 
         savedInstanceState?.getString(KEY_TAB)?.let { currentTab = Tab.valueOf(it) }
 
-        b.tabHome.setOnClickListener { selectTab(Tab.HOME) }
-        b.tabBookings.setOnClickListener { selectTab(Tab.BOOKINGS) }
-        b.tabSettings.setOnClickListener { selectTab(Tab.SETTINGS) }
+        // Пункты меню описаны в res/menu/bottom_nav_menu.xml; id пункта -> вкладка
+        b.bottomNav.setOnItemSelectedListener { item ->
+            selectTab(
+                when (item.itemId) {
+                    R.id.nav_bookings -> Tab.BOOKINGS
+                    R.id.nav_settings -> Tab.SETTINGS
+                    else -> Tab.HOME
+                }
+            )
+            true
+        }
+        // Повторное нажатие на уже выбранную вкладку возвращает на её корневой экран
+        b.bottomNav.setOnItemReselectedListener { selectTab(currentTab) }
 
-        if (savedInstanceState == null) selectTab(Tab.HOME) else updateTabIcons()
+        if (savedInstanceState == null) {
+            selectTab(Tab.HOME)
+        } else {
+            b.bottomNav.selectedItemId = currentTab.menuId
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -50,7 +69,6 @@ class MainFragment : Fragment(R.layout.fragment_main), MainNavigator {
 
     private fun selectTab(tab: Tab) {
         currentTab = tab
-        updateTabIcons()
         // Возврат на корень вкладки: вложенные экраны закрываются
         childFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         val fragment = when (tab) {
@@ -62,20 +80,6 @@ class MainFragment : Fragment(R.layout.fragment_main), MainNavigator {
             setReorderingAllowed(true)
             replace(R.id.tabContainer, fragment)
         }
-    }
-
-    /** Выбранная вкладка — залитая иконка цвета primary; остальные — контурные чёрные. */
-    private fun updateTabIcons() {
-        val b = binding ?: return
-        b.tabHomeIcon.setImageResource(
-            if (currentTab == Tab.HOME) R.drawable.ic_nav_home_selected else R.drawable.ic_nav_home
-        )
-        b.tabBookingsIcon.setImageResource(
-            if (currentTab == Tab.BOOKINGS) R.drawable.ic_nav_bookmark_selected else R.drawable.ic_nav_bookmark
-        )
-        b.tabSettingsIcon.setImageResource(
-            if (currentTab == Tab.SETTINGS) R.drawable.ic_nav_settings_selected else R.drawable.ic_nav_settings
-        )
     }
 
     override fun openSearchResults(query: String) = push(SearchResultsFragment.newInstance(query))
