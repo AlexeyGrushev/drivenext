@@ -25,7 +25,7 @@ class SearchResultsFragment : Fragment(R.layout.fragment_search_results) {
         binding.header.headerTitle.setText(R.string.search_results_title)
         binding.header.backButton.setOnClickListener { (parentFragment as? MainNavigator)?.popBack() }
 
-        val adapter = CarAdapter(onBook = { openBooking() }, onDetails = { openCarDetails() })
+        val adapter = CarAdapter(onBook = { openBooking(it) }, onDetails = { openCarDetails(it) })
         binding.carsList.layoutManager = LinearLayoutManager(requireContext())
         binding.carsList.adapter = adapter
         binding.states.retryButton.setOnClickListener { viewModel.retry() }

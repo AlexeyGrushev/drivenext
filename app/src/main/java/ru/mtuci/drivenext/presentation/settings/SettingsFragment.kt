@@ -10,6 +10,7 @@ import ru.mtuci.drivenext.R
 import ru.mtuci.drivenext.appViewModelFactory
 import ru.mtuci.drivenext.databinding.FragmentSettingsBinding
 import ru.mtuci.drivenext.presentation.common.launchOnStarted
+import ru.mtuci.drivenext.presentation.Navigator
 import ru.mtuci.drivenext.presentation.main.MainNavigator
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
@@ -21,7 +22,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         val main = parentFragment as? MainNavigator
 
         binding.profileRow.setOnClickListener { main?.openProfile() }
-        binding.bookingsRow.setOnClickListener { main?.openStub(R.string.stub_bookings) }
+        binding.bookingsRow.setOnClickListener { (requireActivity() as Navigator).openBookings() }
         binding.connectCarRow.setOnClickListener { main?.openStub(R.string.stub_add_car) }
         // Тема, уведомления, помощь и приглашение — разделы следующих версий
         listOf(binding.themeRow, binding.notificationsRow, binding.helpRow, binding.inviteRow).forEach { row ->
