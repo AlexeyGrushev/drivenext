@@ -13,4 +13,7 @@ interface AuthRepository {
 
     /** true, если есть сохранённая действительная сессия (токен). */
     suspend fun hasValidSession(): Boolean
+
+    /** Id текущего пользователя или null, если не вошли. */
+    fun currentUserId(): String?
 }
