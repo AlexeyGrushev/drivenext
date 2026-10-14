@@ -20,6 +20,7 @@ class MultiPhotoPicker(private val fragment: Fragment, private val maxCount: Int
 
     private var onPicked: ((List<Uri>) -> Unit)? = null
     private var remaining = 0
+    private var totalNow = 0
     private var pendingCameraUri: Uri? = null
 
     // maxItems — ограничение на число выбранных изображений, его задаёт сам контракт
@@ -37,6 +38,7 @@ class MultiPhotoPicker(private val fragment: Fragment, private val maxCount: Int
         if (success) {
             onPicked?.invoke(listOf(uri))
             remaining--
+            totalNow++
             if (remaining > 0) askForNextShot()
         }
     }
@@ -46,6 +48,7 @@ class MultiPhotoPicker(private val fragment: Fragment, private val maxCount: Int
         if (remaining <= 0) return
         this.onPicked = onPicked
         this.remaining = remaining
+        totalNow = maxCount - remaining // сколько фото уже добавлено до выбора
         val items = arrayOf(
             fragment.getString(R.string.car_photos_from_gallery),
             fragment.getString(R.string.car_photos_from_camera),
@@ -75,7 +78,7 @@ class MultiPhotoPicker(private val fragment: Fragment, private val maxCount: Int
     private fun askForNextShot() {
         MaterialAlertDialogBuilder(fragment.requireContext())
             .setTitle(R.string.car_photos_more_title)
-            .setMessage(fragment.getString(R.string.car_photos_more_text, maxCount - remaining, maxCount))
+            .setMessage(fragment.getString(R.string.car_photos_more_text, totalNow, maxCount))
             .setPositiveButton(R.string.car_photos_more_yes) { _, _ -> takeNextShot() }
             .setNegativeButton(R.string.car_photos_more_no, null)
             .show()
