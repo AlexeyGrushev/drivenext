@@ -14,6 +14,11 @@ import ru.mtuci.drivenext.DriveNextApp
 import ru.mtuci.drivenext.R
 import ru.mtuci.drivenext.databinding.ActivityMainBinding
 import ru.mtuci.drivenext.domain.model.StartDestination
+import ru.mtuci.drivenext.presentation.addcar.AddCarAddressFragment
+import ru.mtuci.drivenext.presentation.addcar.AddCarInfoFragment
+import ru.mtuci.drivenext.presentation.addcar.BecomeHostFragment
+import ru.mtuci.drivenext.presentation.addcar.CarAddedFragment
+import ru.mtuci.drivenext.presentation.addcar.CarPhotosFragment
 import ru.mtuci.drivenext.presentation.auth.LoginFragment
 import ru.mtuci.drivenext.presentation.auth.WelcomeFragment
 import ru.mtuci.drivenext.presentation.booking.BookingDetailsFragment
@@ -89,6 +94,11 @@ class MainActivity : AppCompatActivity(), Navigator {
         push(BookingsFragment())
     }
     override fun openBookingDetails(bookingId: Long) = push(BookingDetailsFragment.newInstance(bookingId))
+    override fun openBecomeHost() = push(BecomeHostFragment())
+    override fun openAddCarAddress() = push(AddCarAddressFragment())
+    override fun openAddCarInfo() = push(AddCarInfoFragment())
+    override fun openCarPhotos() = push(CarPhotosFragment())
+    override fun openCarAdded() = replaceRoot(CarAddedFragment())
     override fun back() = onBackPressedDispatcher.onBackPressed()
 
     /** Заменяет экран и очищает стек навигации. */
