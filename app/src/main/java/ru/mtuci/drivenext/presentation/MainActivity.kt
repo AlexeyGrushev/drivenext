@@ -14,8 +14,17 @@ import ru.mtuci.drivenext.DriveNextApp
 import ru.mtuci.drivenext.R
 import ru.mtuci.drivenext.databinding.ActivityMainBinding
 import ru.mtuci.drivenext.domain.model.StartDestination
+import ru.mtuci.drivenext.presentation.addcar.AddCarAddressFragment
+import ru.mtuci.drivenext.presentation.addcar.AddCarInfoFragment
+import ru.mtuci.drivenext.presentation.addcar.BecomeHostFragment
+import ru.mtuci.drivenext.presentation.addcar.CarAddedFragment
+import ru.mtuci.drivenext.presentation.addcar.CarPhotosFragment
 import ru.mtuci.drivenext.presentation.auth.LoginFragment
 import ru.mtuci.drivenext.presentation.auth.WelcomeFragment
+import ru.mtuci.drivenext.presentation.booking.BookingDetailsFragment
+import ru.mtuci.drivenext.presentation.booking.BookingSuccessFragment
+import ru.mtuci.drivenext.presentation.booking.BookingsFragment
+import ru.mtuci.drivenext.presentation.booking.CheckoutFragment
 import ru.mtuci.drivenext.presentation.main.MainFragment
 import ru.mtuci.drivenext.presentation.noconnection.NoConnectionFragment
 import ru.mtuci.drivenext.presentation.onboarding.OnboardingFragment
@@ -77,6 +86,19 @@ class MainActivity : AppCompatActivity(), Navigator {
     override fun openRegistrationSuccess() = replaceRoot(RegistrationSuccessFragment())
     override fun openHome() = replaceRoot(MainFragment())
     override fun openLoginAsRoot() = replaceRoot(LoginFragment())
+    override fun openCheckout(carId: Long) = push(CheckoutFragment.newInstance(carId))
+    override fun openBookingSuccess() = replaceRoot(BookingSuccessFragment())
+    override fun openBookings() = push(BookingsFragment())
+    override fun openBookingsAfterSuccess() {
+        replaceRoot(MainFragment())
+        push(BookingsFragment())
+    }
+    override fun openBookingDetails(bookingId: Long) = push(BookingDetailsFragment.newInstance(bookingId))
+    override fun openBecomeHost() = push(BecomeHostFragment())
+    override fun openAddCarAddress() = push(AddCarAddressFragment())
+    override fun openAddCarInfo() = push(AddCarInfoFragment())
+    override fun openCarPhotos() = push(CarPhotosFragment())
+    override fun openCarAdded() = replaceRoot(CarAddedFragment())
     override fun back() = onBackPressedDispatcher.onBackPressed()
 
     /** Заменяет экран и очищает стек навигации. */
@@ -95,6 +117,9 @@ class MainActivity : AppCompatActivity(), Navigator {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             replace(R.id.fragmentContainer, fragment)
+            // Первичным становится новый экран: иначе «Назад» сначала пытался бы закрыть
+            // вложенные экраны скрытого MainFragment. После возврата прежний первичный восстанавливается.
+            setPrimaryNavigationFragment(fragment)
             addToBackStack(null)
         }
     }

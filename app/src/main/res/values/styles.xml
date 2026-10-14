@@ -213,4 +213,19 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/text_label</item>
     </style>
+
+    <!-- Нижнее меню: без плашки-индикатора и подписей, как в макете -->
+    <style name="Widget.DriveNext.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+        <item name="elevation">8dp</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemIconTint">@color/nav_item_tint</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.DriveNext.BottomNavigation.Indicator</item>
+        <item name="itemPaddingTop">0dp</item>
+        <item name="itemPaddingBottom">0dp</item>
+    </style>
+    <style name="Widget.DriveNext.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
 </resources>

@@ -109,6 +109,7 @@
     <!-- Нижнее меню -->
     <string name="nav_home">Главная</string>
     <string name="nav_bookings">Брони</string>
+    <string name="nav_favorites">Избранное</string>
     <string name="nav_settings">Настройки</string>
 
     <!-- Настройки -->
@@ -157,4 +158,126 @@
     <string name="content_description_avatar">Аватар</string>
     <string name="content_description_car">Фото автомобиля</string>
     <string name="logout_loading">Выходим…</string>
+
+    <!-- ЛР4: детали, бронирование, избранное -->
+    <string name="error_favorite_failed">Не удалось добавить в избранное. Попробуйте снова.</string>
+    <string name="details_title">Детали</string>
+    <string name="details_address_label">Адрес нахождения</string>
+    <string name="details_description_label">Описание</string>
+    <string name="details_price_per_day_format">%1$d₽/день</string>
+    <string name="details_no_description">Описание не добавлено</string>
+    <string name="details_no_address">Адрес не указан</string>
+    <string name="content_description_favorite">Добавить в избранное</string>
+    <string name="content_description_pin">Адрес</string>
+
+    <string name="checkout_title">Оформление аренды</string>
+    <string name="checkout_start">Начало аренды:</string>
+    <string name="checkout_end">Конец аренды:</string>
+    <string name="checkout_rental">Аренда автомобиля</string>
+    <string name="checkout_insurance">Страховка</string>
+    <string name="checkout_total">Итого</string>
+    <string name="checkout_deposit">Возвращаемый депозит</string>
+    <string name="checkout_continue">Продолжить</string>
+    <string name="checkout_price_per_day_format">%1$d₽/день</string>
+    <string name="checkout_money_format">%1$d₽</string>
+    <string name="date_range_title">Период аренды</string>
+    <string name="days_one">х%1$d день</string>
+    <string name="days_few">х%1$d дня</string>
+    <string name="days_many">х%1$d дней</string>
+
+    <string name="booking_success_screen_title">Удачной поездки</string>
+    <string name="booking_success_text">Бронирование успешно создано</string>
+    <string name="booking_success_to_bookings">Перейти к своим бронированиям</string>
+    <string name="booking_success_home">Домой</string>
+
+    <string name="bookings_empty">У вас пока нет бронирований</string>
+    <string name="booking_start_format">Начало аренды: %1$s</string>
+    <string name="booking_completed_format">Аренда завершена, %1$s</string>
+    <string name="booking_cancelled_format">Аренда отменена, %1$s</string>
+    <string name="booking_title_format">Бронирование # %1$d</string>
+    <string name="booking_address">Адрес нахождения</string>
+    <string name="booking_start">Начало аренды</string>
+    <string name="booking_end">Конец аренды</string>
+    <string name="booking_driver">ФИО водителя</string>
+    <string name="booking_license">Номер ВУ</string>
+    <string name="booking_status">Статус аренды</string>
+    <string name="booking_status_approved">Одобрено</string>
+    <string name="booking_status_completed">Завершено</string>
+    <string name="booking_status_cancelled">Отменено</string>
+    <string name="booking_rental">Аренда</string>
+    <string name="booking_insurance">Страховка</string>
+    <string name="booking_total">Общая сумма</string>
+    <string name="booking_cancel">Отменить бронирование</string>
+    <string name="booking_cancel_confirm_title">Отменить бронирование?</string>
+    <string name="booking_cancel_confirm_text">Это действие нельзя отменить.</string>
+    <string name="booking_cancel_confirm_yes">Отменить</string>
+    <string name="booking_cancel_confirm_no">Не отменять</string>
+    <string name="booking_dash">—</string>
+
+    <string name="favorites_title">Избранное</string>
+    <string name="favorites_empty">В избранном пока ничего нет</string>
+
+    <string-array name="months_genitive">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+
+    <!-- ЛР5: стать арендодателем, добавление автомобиля -->
+    <string name="host_title">Стать арендодателем</string>
+    <string name="host_intro">Узнайте, что включает в себя становление арендодателем в приложении. Присоединяйтесь к тысячам владельцев, зарабатывающих в приложении.</string>
+    <string name="host_card1_title">Как это работает</string>
+    <string name="host_card1_text">Размещение бесплатное, вы можете устанавливать свои цены, доступность и правила. Получение и возврат автомобиля просты, а оплата производится быстро после каждой поездки.</string>
+    <string name="host_card2_title">Политика страхования</string>
+    <string name="host_card2_text">Доступны различные уровни защиты автомобиля на случай непредвиденных ситуаций.</string>
+    <string name="host_card3_title">Мы поддержим вас</string>
+    <string name="host_card3_text">От проверки арендаторов до поддержки клиентов – вы всегда можете делиться своим автомобилем с уверенностью.</string>
+    <string name="host_start">Начать</string>
+
+    <string name="add_car_title">Добавление автомобиля</string>
+    <string name="add_car_address_label">Где расположен ваш автомобиль?</string>
+    <string name="add_car_address_hint">Введите адрес</string>
+    <string name="add_car_year_label">Год выпуска</string>
+    <string name="add_car_year_hint">Год</string>
+    <string name="add_car_brand_label">Марка автомобиля</string>
+    <string name="add_car_brand_hint">Марка</string>
+    <string name="add_car_model_label">Модель</string>
+    <string name="add_car_model_hint">Модель</string>
+    <string name="add_car_transmission_hint">Трансмиссия</string>
+    <string name="add_car_mileage_hint">Пробег</string>
+    <string name="add_car_description_label">Добавьте описание</string>
+    <string name="add_car_description_hint">Пожалуйста, добавьте дополнительную информацию о вашем автомобиле, которая может быть интересна арендатору. Например, о внутреннем оформлении, мощности и других особенностях вашего автомобиля.</string>
+    <string name="add_car_submit">Отправить</string>
+    <string name="add_car_error_year">Введите корректный год выпуска.</string>
+    <string name="add_car_error_mileage">Введите пробег числом.</string>
+    <string name="transmission_at">Автомат (A/T)</string>
+    <string name="transmission_mt">Механика (M/T)</string>
+    <string name="transmission_amt">Робот (AMT)</string>
+    <string name="transmission_cvt">Вариатор (CVT)</string>
+
+    <string name="car_photos_title">Добавление фотографий</string>
+    <string name="car_photos_add">Добавить фото</string>
+    <string name="car_photos_source_title">Добавить фото (до %1$d)</string>
+    <string name="car_photos_from_gallery">Выбрать из галереи</string>
+    <string name="car_photos_from_camera">Сделать снимки</string>
+    <string name="car_photos_more_title">Сделать ещё снимок?</string>
+    <string name="car_photos_more_text">Добавлено фото: %1$d из %2$d.</string>
+    <string name="car_photos_more_yes">Да</string>
+    <string name="car_photos_more_no">Нет</string>
+    <string name="car_photos_limit">Можно добавить не более %1$d фотографий.</string>
+    <string name="content_description_remove_photo">Удалить фото</string>
+    <string name="content_description_car_photo">Фото автомобиля</string>
+
+    <string name="car_added_title">Ваш автомобиль добавлен</string>
+    <string name="car_added_text">Поздравляем! Ваш автомобиль одобрен</string>
+    <string name="car_added_home">На главную</string>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Пункты нижнего меню: id используется в MainFragment для переключения вкладок -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/selector_nav_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/selector_nav_bookings"
+        android:title="@string/nav_favorites" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/selector_nav_settings"
+        android:title="@string/nav_settings" />
+</menu>

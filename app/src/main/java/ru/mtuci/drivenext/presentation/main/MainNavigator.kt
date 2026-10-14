@@ -6,6 +6,7 @@ import androidx.annotation.StringRes
 interface MainNavigator {
     fun openSearchResults(query: String)
     fun openProfile()
+    fun openCarDetails(carId: Long)
     fun openStub(@StringRes titleRes: Int)
     fun popBack()
 }

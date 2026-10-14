@@ -3,6 +3,7 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 // Ключи Supabase лежат в local.properties (файл не попадает в git)
@@ -61,6 +62,11 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.swiperefreshlayout)
     implementation(libs.coil)
+
+    // Room: локальная БД (избранное), аннотации обрабатывает KSP
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     // Supabase: BOM выравнивает версии модулей, Ktor — HTTP-движок для Android
     implementation(platform(libs.supabase.bom))

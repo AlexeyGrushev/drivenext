@@ -59,4 +59,7 @@ class AuthRepositoryImpl(private val provider: SupabaseProvider) : AuthRepositor
         auth.awaitInitialization()
         return auth.currentSessionOrNull() != null
     }
+
+    override fun currentUserId(): String? =
+        if (provider.isConfigured) provider.requireClient().auth.currentUserOrNull()?.id else null
 }

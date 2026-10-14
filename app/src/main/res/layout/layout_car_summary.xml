@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_outline"
+    android:minHeight="150dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/summaryModel"
+        style="@style/TextAppearance.DriveNext.SectionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@id/summaryImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/summaryImage"
+        app:layout_constraintBottom_toTopOf="@id/summaryBrand"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="S 500 Sedan" />
+
+    <TextView
+        android:id="@+id/summaryBrand"
+        style="@style/TextAppearance.DriveNext.CardBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@id/summaryImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summaryModel"
+        app:layout_constraintBottom_toTopOf="@id/summaryPrice"
+        tools:text="Mercedes-Benz" />
+
+    <TextView
+        android:id="@+id/summaryPrice"
+        style="@style/TextAppearance.DriveNext.SectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/primary_dark"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/summaryBrand"
+        app:layout_constraintBottom_toBottomOf="@id/summaryImage"
+        tools:text="2500₽" />
+
+    <TextView
+        android:id="@+id/summaryPerDay"
+        style="@style/TextAppearance.DriveNext.CardBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/car_per_day"
+        app:layout_constraintBaseline_toBaselineOf="@id/summaryPrice"
+        app:layout_constraintStart_toEndOf="@id/summaryPrice" />
+
+    <ImageView
+        android:id="@+id/summaryImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/content_description_car"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="176:136"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
