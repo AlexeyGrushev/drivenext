@@ -44,6 +44,7 @@ class ProfileRepositoryImpl(
                 avatarUrl = dto?.avatarUrl,
                 googleEmail = if (isGoogle) email else null,
                 joinedAt = (dto?.createdAt ?: user.createdAt?.toString())?.let(::parseIsoDate),
+                licenseNumber = dto?.licenseNumber,
             )
         }
 
