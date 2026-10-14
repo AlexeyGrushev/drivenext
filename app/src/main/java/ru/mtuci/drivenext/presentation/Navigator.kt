@@ -32,5 +32,14 @@ interface Navigator {
 
     fun openBookingDetails(bookingId: Long)
 
+    /** «Стать арендодателем» и шаги добавления автомобиля. */
+    fun openBecomeHost()
+    fun openAddCarAddress()
+    fun openAddCarInfo()
+    fun openCarPhotos()
+
+    /** «Ваш автомобиль добавлен»: стек навигации очищается. */
+    fun openCarAdded()
+
     fun back()
 }

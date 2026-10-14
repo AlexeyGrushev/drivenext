@@ -2,6 +2,7 @@ package ru.mtuci.drivenext.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import ru.mtuci.drivenext.presentation.addcar.AddCarViewModel
 import ru.mtuci.drivenext.presentation.auth.LoginViewModel
 import ru.mtuci.drivenext.presentation.booking.BookingDetailsViewModel
 import ru.mtuci.drivenext.presentation.booking.BookingsViewModel
@@ -37,6 +38,7 @@ class ViewModelFactory(private val container: AppContainer) : ViewModelProvider.
         BookingsViewModel::class.java -> BookingsViewModel(container.getBookings)
         BookingDetailsViewModel::class.java -> BookingDetailsViewModel(container.getBooking, container.cancelBooking)
         FavoritesViewModel::class.java -> FavoritesViewModel(container.observeFavorites)
+        AddCarViewModel::class.java -> AddCarViewModel(container.saveCar, container.uploadCarPhotos)
         else -> throw IllegalArgumentException("Unknown ViewModel: ${modelClass.name}")
     } as T
 }

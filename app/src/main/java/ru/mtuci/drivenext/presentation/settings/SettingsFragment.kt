@@ -23,7 +23,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
         binding.profileRow.setOnClickListener { main?.openProfile() }
         binding.bookingsRow.setOnClickListener { (requireActivity() as Navigator).openBookings() }
-        binding.connectCarRow.setOnClickListener { main?.openStub(R.string.stub_add_car) }
+        binding.connectCarRow.setOnClickListener { (requireActivity() as Navigator).openBecomeHost() }
         // Тема, уведомления, помощь и приглашение — разделы следующих версий
         listOf(binding.themeRow, binding.notificationsRow, binding.helpRow, binding.inviteRow).forEach { row ->
             row.setOnClickListener { Snackbar.make(binding.root, R.string.coming_soon, Snackbar.LENGTH_SHORT).show() }
