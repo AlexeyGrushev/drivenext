@@ -231,4 +231,53 @@
         <item>ноября</item>
         <item>декабря</item>
     </string-array>
+
+    <!-- ЛР5: стать арендодателем, добавление автомобиля -->
+    <string name="host_title">Стать арендодателем</string>
+    <string name="host_intro">Узнайте, что включает в себя становление арендодателем в приложении. Присоединяйтесь к тысячам владельцев, зарабатывающих в приложении.</string>
+    <string name="host_card1_title">Как это работает</string>
+    <string name="host_card1_text">Размещение бесплатное, вы можете устанавливать свои цены, доступность и правила. Получение и возврат автомобиля просты, а оплата производится быстро после каждой поездки.</string>
+    <string name="host_card2_title">Политика страхования</string>
+    <string name="host_card2_text">Доступны различные уровни защиты автомобиля на случай непредвиденных ситуаций.</string>
+    <string name="host_card3_title">Мы поддержим вас</string>
+    <string name="host_card3_text">От проверки арендаторов до поддержки клиентов – вы всегда можете делиться своим автомобилем с уверенностью.</string>
+    <string name="host_start">Начать</string>
+
+    <string name="add_car_title">Добавление автомобиля</string>
+    <string name="add_car_address_label">Где расположен ваш автомобиль?</string>
+    <string name="add_car_address_hint">Введите адрес</string>
+    <string name="add_car_year_label">Год выпуска</string>
+    <string name="add_car_year_hint">Год</string>
+    <string name="add_car_brand_label">Марка автомобиля</string>
+    <string name="add_car_brand_hint">Марка</string>
+    <string name="add_car_model_label">Модель</string>
+    <string name="add_car_model_hint">Модель</string>
+    <string name="add_car_transmission_hint">Трансмиссия</string>
+    <string name="add_car_mileage_hint">Пробег</string>
+    <string name="add_car_description_label">Добавьте описание</string>
+    <string name="add_car_description_hint">Пожалуйста, добавьте дополнительную информацию о вашем автомобиле, которая может быть интересна арендатору. Например, о внутреннем оформлении, мощности и других особенностях вашего автомобиля.</string>
+    <string name="add_car_submit">Отправить</string>
+    <string name="add_car_error_year">Введите корректный год выпуска.</string>
+    <string name="add_car_error_mileage">Введите пробег числом.</string>
+    <string name="transmission_at">Автомат (A/T)</string>
+    <string name="transmission_mt">Механика (M/T)</string>
+    <string name="transmission_amt">Робот (AMT)</string>
+    <string name="transmission_cvt">Вариатор (CVT)</string>
+
+    <string name="car_photos_title">Добавление фотографий</string>
+    <string name="car_photos_add">Добавить фото</string>
+    <string name="car_photos_source_title">Добавить фото (до %1$d)</string>
+    <string name="car_photos_from_gallery">Выбрать из галереи</string>
+    <string name="car_photos_from_camera">Сделать снимки</string>
+    <string name="car_photos_more_title">Сделать ещё снимок?</string>
+    <string name="car_photos_more_text">Добавлено фото: %1$d из %2$d.</string>
+    <string name="car_photos_more_yes">Да</string>
+    <string name="car_photos_more_no">Нет</string>
+    <string name="car_photos_limit">Можно добавить не более %1$d фотографий.</string>
+    <string name="content_description_remove_photo">Удалить фото</string>
+    <string name="content_description_car_photo">Фото автомобиля</string>
+
+    <string name="car_added_title">Ваш автомобиль добавлен</string>
+    <string name="car_added_text">Поздравляем! Ваш автомобиль одобрен</string>
+    <string name="car_added_home">На главную</string>
 </resources>
