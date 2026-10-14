@@ -21,7 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentHomeBinding.bind(view)
 
-        val adapter = CarAdapter(onBook = { openBooking() }, onDetails = { openCarDetails() })
+        val adapter = CarAdapter(onBook = { openBooking(it) }, onDetails = { openCarDetails(it) })
         binding.carsList.layoutManager = LinearLayoutManager(requireContext())
         binding.carsList.adapter = adapter
 

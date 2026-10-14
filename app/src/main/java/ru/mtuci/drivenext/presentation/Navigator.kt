@@ -19,5 +19,18 @@ interface Navigator {
     /** Выход из аккаунта: экран входа, стек очищается. */
     fun openLoginAsRoot()
 
+    /** Оформление аренды выбранного автомобиля (без нижнего меню). */
+    fun openCheckout(carId: Long)
+
+    /** «Удачной поездки»: стек навигации очищается. */
+    fun openBookingSuccess()
+
+    fun openBookings()
+
+    /** Список броней после успешного оформления: домой, затем «Мои бронирования» поверх. */
+    fun openBookingsAfterSuccess()
+
+    fun openBookingDetails(bookingId: Long)
+
     fun back()
 }

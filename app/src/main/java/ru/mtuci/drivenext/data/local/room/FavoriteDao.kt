@@ -17,6 +17,9 @@ interface FavoriteDao {
     @Query("SELECT EXISTS(SELECT 1 FROM favorites WHERE userId = :userId AND carId = :carId)")
     fun observeIsFavorite(userId: String, carId: Long): Flow<Boolean>
 
+    @Query("SELECT EXISTS(SELECT 1 FROM favorites WHERE userId = :userId AND carId = :carId)")
+    suspend fun isFavorite(userId: String, carId: Long): Boolean
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(favorite: FavoriteEntity)
 

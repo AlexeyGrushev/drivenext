@@ -1,10 +1,12 @@
 package ru.mtuci.drivenext.presentation.cars
 
 import androidx.fragment.app.Fragment
-import ru.mtuci.drivenext.R
+import ru.mtuci.drivenext.domain.model.Car
+import ru.mtuci.drivenext.presentation.Navigator
 import ru.mtuci.drivenext.presentation.main.MainNavigator
 
-/** «Забронировать» и «Детали» ведут на экраны следующих работ — пока это заглушки. */
-fun Fragment.openBooking() = (parentFragment as? MainNavigator)?.openStub(R.string.stub_booking_checkout)
+/** «Забронировать» → оформление аренды (поверх всего приложения, без нижнего меню). */
+fun Fragment.openBooking(car: Car) = (requireActivity() as Navigator).openCheckout(car.id)
 
-fun Fragment.openCarDetails() = (parentFragment as? MainNavigator)?.openStub(R.string.stub_car_details)
+/** «Детали» → экран деталей внутри контейнера с нижним меню. */
+fun Fragment.openCarDetails(car: Car) = (parentFragment as? MainNavigator)?.openCarDetails(car.id)
