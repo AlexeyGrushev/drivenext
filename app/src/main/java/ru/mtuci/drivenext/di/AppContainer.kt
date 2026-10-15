@@ -21,6 +21,8 @@ import ru.mtuci.drivenext.domain.repository.BookingRepository
 import ru.mtuci.drivenext.domain.repository.CarRepository
 import ru.mtuci.drivenext.domain.repository.FavoritesRepository
 import ru.mtuci.drivenext.domain.repository.NetworkChecker
+import ru.mtuci.drivenext.domain.repository.Notifier
+import ru.mtuci.drivenext.presentation.notifications.AndroidNotifier
 import ru.mtuci.drivenext.domain.repository.OnboardingRepository
 import ru.mtuci.drivenext.domain.repository.ProfileRepository
 import ru.mtuci.drivenext.domain.repository.SessionRepository
@@ -54,6 +56,7 @@ class AppContainer(context: Context) {
     private val networkChecker: NetworkChecker = NetworkCheckerImpl(appContext)
     val onboardingRepository: OnboardingRepository = OnboardingRepositoryImpl(appContext)
     val appSettings: AppSettingsRepository = AppSettingsRepositoryImpl(appContext)
+    val notifier: Notifier = AndroidNotifier(appContext, appSettings)
     private val authRepository: AuthRepository = AuthRepositoryImpl(supabaseProvider)
     private val sessionRepository: SessionRepository = SessionRepositoryImpl(authRepository)
     private val profileRepository: ProfileRepository =
