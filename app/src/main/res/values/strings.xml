@@ -25,6 +25,7 @@
     <string name="action_ok">ОК</string>
     <string name="action_cancel">Отмена</string>
     <string name="dialog_error_title">Ошибка</string>
+    <string name="details_photo_counter">%1$d / %2$d</string>
     <string name="coming_soon">Этот раздел появится в следующих версиях</string>
 
     <!-- Вход / регистрация (Getting started) -->
