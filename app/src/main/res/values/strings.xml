@@ -25,6 +25,51 @@
     <string name="action_ok">ОК</string>
     <string name="action_cancel">Отмена</string>
     <string name="dialog_error_title">Ошибка</string>
+    <string name="details_photo_counter">%1$d / %2$d</string>
+    <string name="help_title">Помощь</string>
+    <string name="help_faq_title">Частые вопросы</string>
+    <string name="help_contact_title">Не нашли ответ?</string>
+    <string name="help_contact_text">Напишите нам, мы отвечаем в течение рабочего дня.</string>
+    <string name="help_support_email">support@drivenext.ru</string>
+    <string name="help_write_button">Написать в поддержку</string>
+    <string name="help_mail_subject">Вопрос по приложению DriveNext</string>
+    <string name="help_email_copied">Почта поддержки скопирована</string>
+    <string name="invite_link">https://drivenext.ru</string>
+    <string name="invite_link_copied">Ссылка-приглашение скопирована</string>
+    <string-array name="faq_questions">
+        <item>Как забронировать автомобиль?</item>
+        <item>Какие документы нужны для аренды?</item>
+        <item>Как отменить бронирование?</item>
+        <item>Что такое залог и когда он возвращается?</item>
+        <item>Что входит в стоимость аренды?</item>
+        <item>Как сдать свой автомобиль в аренду?</item>
+        <item>Как изменить данные профиля или аватар?</item>
+    </string-array>
+    <string-array name="faq_answers">
+        <item>Выберите автомобиль на главном экране, нажмите «Забронировать», укажите даты аренды и подтвердите бронь. Актуальные брони доступны в разделе «Мои бронирования».</item>
+        <item>Нужны паспорт и водительское удостоверение. Их фотографии загружаются при регистрации, повторно отправлять документы не требуется.</item>
+        <item>Откройте «Настройки» → «Мои бронирования», выберите активную бронь и нажмите «Отменить бронирование». Отменить можно до начала аренды.</item>
+        <item>Залог — сумма, которую мы временно блокируем на время поездки. Если автомобиль возвращён без повреждений, залог возвращается в течение нескольких дней после завершения аренды.</item>
+        <item>В стоимость входят аренда автомобиля и страховка за каждый день. Топливо оплачивает арендатор.</item>
+        <item>Откройте «Настройки» → «Подключить свой автомобиль», заполните данные об автомобиле и добавьте до пяти фотографий. После проверки он появится в каталоге.</item>
+        <item>Откройте «Настройки» и нажмите на свою карточку вверху: там можно сменить фото профиля и посмотреть данные аккаунта.</item>
+    </string-array>
+    <string name="notifications_push">Push-уведомления</string>
+    <string name="notifications_push_hint">Разрешить приложению отправлять уведомления</string>
+    <string name="notifications_bookings">Бронирования</string>
+    <string name="notifications_bookings_hint">Оформление и отмена аренды</string>
+    <string name="notifications_promo">Акции и скидки</string>
+    <string name="notifications_promo_hint">Новости сервиса и специальные предложения</string>
+    <string name="notifications_test">Отправить тестовое уведомление</string>
+    <string name="notifications_permission_denied">Без разрешения уведомления показываться не будут</string>
+    <string name="notifications_open_settings">Настройки</string>
+    <string name="notification_channel_bookings">Бронирования</string>
+    <string name="notification_booking_created_title">Бронирование оформлено</string>
+    <string name="notification_booking_created_text">%1$s: с %2$s по %3$s. Удачной поездки!</string>
+    <string name="notification_booking_cancelled_title">Бронирование отменено</string>
+    <string name="notification_booking_cancelled_text">Вы отменили аренду автомобиля %1$s.</string>
+    <string name="notification_test_title">DriveNext</string>
+    <string name="notification_test_text">Уведомления работают. Мы сообщим о ваших бронированиях.</string>
     <string name="coming_soon">Этот раздел появится в следующих версиях</string>
 
     <!-- Вход / регистрация (Getting started) -->
@@ -116,6 +161,9 @@
     <string name="settings_title">Настройки</string>
     <string name="settings_my_bookings">Мои бронирования</string>
     <string name="settings_theme">Тема</string>
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
     <string name="settings_notifications">Уведомления</string>
     <string name="settings_connect_car">Подключить свой автомобиль</string>
     <string name="settings_help">Помощь</string>

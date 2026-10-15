@@ -12,6 +12,7 @@ import ru.mtuci.drivenext.presentation.cars.SearchResultsViewModel
 import ru.mtuci.drivenext.presentation.details.CarDetailsViewModel
 import ru.mtuci.drivenext.presentation.favorites.FavoritesViewModel
 import ru.mtuci.drivenext.presentation.noconnection.NoConnectionViewModel
+import ru.mtuci.drivenext.presentation.notifications.NotificationsViewModel
 import ru.mtuci.drivenext.presentation.onboarding.OnboardingViewModel
 import ru.mtuci.drivenext.presentation.profile.ProfileViewModel
 import ru.mtuci.drivenext.presentation.registration.RegistrationViewModel
@@ -29,14 +30,15 @@ class ViewModelFactory(private val container: AppContainer) : ViewModelProvider.
         RegistrationViewModel::class.java -> RegistrationViewModel(container.registerUser)
         HomeViewModel::class.java -> HomeViewModel(container.getCars)
         SearchResultsViewModel::class.java -> SearchResultsViewModel(container.searchCars)
-        SettingsViewModel::class.java -> SettingsViewModel(container.getProfile)
+        SettingsViewModel::class.java -> SettingsViewModel(container.getProfile, container.appSettings)
         ProfileViewModel::class.java ->
             ProfileViewModel(container.getProfile, container.updateAvatar, container.signOut)
         CarDetailsViewModel::class.java ->
             CarDetailsViewModel(container.getCar, container.observeIsFavorite, container.toggleFavorite)
-        CheckoutViewModel::class.java -> CheckoutViewModel(container.getCar, container.createBooking)
+        CheckoutViewModel::class.java -> CheckoutViewModel(container.getCar, container.createBooking, container.notifier)
         BookingsViewModel::class.java -> BookingsViewModel(container.getBookings)
-        BookingDetailsViewModel::class.java -> BookingDetailsViewModel(container.getBooking, container.cancelBooking)
+        BookingDetailsViewModel::class.java -> BookingDetailsViewModel(container.getBooking, container.cancelBooking, container.notifier)
+        NotificationsViewModel::class.java -> NotificationsViewModel(container.appSettings, container.notifier)
         FavoritesViewModel::class.java -> FavoritesViewModel(container.observeFavorites)
         AddCarViewModel::class.java -> AddCarViewModel(container.saveCar, container.uploadCarPhotos)
         else -> throw IllegalArgumentException("Unknown ViewModel: ${modelClass.name}")

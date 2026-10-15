@@ -19,4 +19,7 @@ data class Car(
 
     /** Главное фото: первое загруженное владельцем или фото из каталога. */
     val mainImage: String? get() = photos.firstOrNull() ?: imageUrl
+
+    /** Все фото для галереи на экране «Детали»; если загруженных фото нет — одно фото из каталога. */
+    val gallery: List<String> get() = photos.ifEmpty { listOfNotNull(imageUrl) }
 }

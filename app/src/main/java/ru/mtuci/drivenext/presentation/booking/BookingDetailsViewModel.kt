@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ru.mtuci.drivenext.domain.model.Booking
+import ru.mtuci.drivenext.domain.repository.Notifier
 import ru.mtuci.drivenext.domain.usecase.CancelBookingUseCase
 import ru.mtuci.drivenext.domain.usecase.GetBookingUseCase
 
@@ -22,6 +23,7 @@ data class BookingDetailsUiState(
 class BookingDetailsViewModel(
     private val getBooking: GetBookingUseCase,
     private val cancelBooking: CancelBookingUseCase,
+    private val notifier: Notifier,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(BookingDetailsUiState())
@@ -51,7 +53,10 @@ class BookingDetailsViewModel(
         _state.update { it.copy(isCancelling = true) }
         viewModelScope.launch {
             cancelBooking(id)
-                .onSuccess { _state.update { it.copy(isCancelling = false, cancelled = true) } }
+                .onSuccess {
+                    _state.value.booking?.let { notifier.bookingCancelled("${it.brand} ${it.model}") }
+                    _state.update { it.copy(isCancelling = false, cancelled = true) }
+                }
                 .onFailure { e -> _state.update { it.copy(isCancelling = false, cancelError = e.message) } }
         }
     }

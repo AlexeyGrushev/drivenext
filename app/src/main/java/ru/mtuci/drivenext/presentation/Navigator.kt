@@ -27,6 +27,12 @@ interface Navigator {
 
     fun openBookings()
 
+    /** «Помощь»: частые вопросы и связь с поддержкой. */
+    fun openHelp()
+
+    /** «Уведомления»: разрешение и типы уведомлений. */
+    fun openNotifications()
+
     /** Список броней после успешного оформления: домой, затем «Мои бронирования» поверх. */
     fun openBookingsAfterSuccess()
 

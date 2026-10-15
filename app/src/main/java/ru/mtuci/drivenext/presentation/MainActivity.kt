@@ -25,8 +25,10 @@ import ru.mtuci.drivenext.presentation.booking.BookingDetailsFragment
 import ru.mtuci.drivenext.presentation.booking.BookingSuccessFragment
 import ru.mtuci.drivenext.presentation.booking.BookingsFragment
 import ru.mtuci.drivenext.presentation.booking.CheckoutFragment
+import ru.mtuci.drivenext.presentation.help.HelpFragment
 import ru.mtuci.drivenext.presentation.main.MainFragment
 import ru.mtuci.drivenext.presentation.noconnection.NoConnectionFragment
+import ru.mtuci.drivenext.presentation.notifications.NotificationsFragment
 import ru.mtuci.drivenext.presentation.onboarding.OnboardingFragment
 import ru.mtuci.drivenext.presentation.registration.RegistrationSuccessFragment
 import ru.mtuci.drivenext.presentation.registration.SignUpStep1Fragment
@@ -89,6 +91,8 @@ class MainActivity : AppCompatActivity(), Navigator {
     override fun openCheckout(carId: Long) = push(CheckoutFragment.newInstance(carId))
     override fun openBookingSuccess() = replaceRoot(BookingSuccessFragment())
     override fun openBookings() = push(BookingsFragment())
+    override fun openHelp() = push(HelpFragment())
+    override fun openNotifications() = push(NotificationsFragment())
     override fun openBookingsAfterSuccess() {
         replaceRoot(MainFragment())
         push(BookingsFragment())

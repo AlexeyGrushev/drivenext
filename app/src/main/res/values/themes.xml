@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Основная тема приложения (дизайн только светлый) -->
-    <style name="Theme.DriveNext" parent="Theme.Material3.Light.NoActionBar">
+    <!-- Основная тема: светлая или тёмная, переключается в настройках (DayNight) -->
+    <style name="Theme.DriveNext" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowBackground">@color/surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="android:colorBackground">@color/surface</item>
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.DriveNext.Dialog</item>
         <item name="fontFamily">@font/montserrat</item>
@@ -11,7 +14,7 @@
 
     <!-- Тема SplashScreen: показывается системой при старте, затем переключается на Theme.DriveNext -->
     <style name="Theme.DriveNext.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenBackground">@color/surface</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon</item>
         <item name="postSplashScreenTheme">@style/Theme.DriveNext</item>
     </style>
