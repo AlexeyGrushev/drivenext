@@ -28,7 +28,6 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         binding.profileRow.setOnClickListener { main?.openProfile() }
         binding.bookingsRow.setOnClickListener { (requireActivity() as Navigator).openBookings() }
         binding.connectCarRow.setOnClickListener { (requireActivity() as Navigator).openBecomeHost() }
-        // Тема, уведомления, помощь и приглашение — разделы следующих версий
         binding.themeRow.setOnClickListener { showThemeDialog(binding) }
         binding.themeValue.setText(themeTitle(viewModel.themeMode))
         binding.helpRow.setOnClickListener { (requireActivity() as Navigator).openHelp() }
@@ -36,9 +35,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             copyToClipboard(getString(R.string.invite_link))
             Snackbar.make(binding.root, R.string.invite_link_copied, Snackbar.LENGTH_SHORT).show()
         }
-        listOf(binding.notificationsRow).forEach { row ->
-            row.setOnClickListener { Snackbar.make(binding.root, R.string.coming_soon, Snackbar.LENGTH_SHORT).show() }
-        }
+        binding.notificationsRow.setOnClickListener { (requireActivity() as Navigator).openNotifications() }
 
         launchOnStarted {
             viewModel.profile.collect { profile ->
