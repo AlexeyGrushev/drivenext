@@ -29,7 +29,7 @@ class ViewModelFactory(private val container: AppContainer) : ViewModelProvider.
         RegistrationViewModel::class.java -> RegistrationViewModel(container.registerUser)
         HomeViewModel::class.java -> HomeViewModel(container.getCars)
         SearchResultsViewModel::class.java -> SearchResultsViewModel(container.searchCars)
-        SettingsViewModel::class.java -> SettingsViewModel(container.getProfile)
+        SettingsViewModel::class.java -> SettingsViewModel(container.getProfile, container.appSettings)
         ProfileViewModel::class.java ->
             ProfileViewModel(container.getProfile, container.updateAvatar, container.signOut)
         CarDetailsViewModel::class.java ->

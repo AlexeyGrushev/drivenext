@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Цвета тёмной темы: подменяют одноимённые из values/colors.xml, когда включён ночной режим -->
+<resources>
+    <color name="primary_dark">#FF8E5FD1</color>
+    <color name="text_primary">#FFECE8F2</color>
+    <color name="text_secondary">#FFC4BFCC</color>
+    <color name="text_label">#FFCFCAD6</color>
+    <color name="text_hint">#FF9AA0AE</color>
+    <color name="text_gray_700">#FFD0D5DD</color>
+    <color name="title_navy">#FFF2F4F7</color>
+    <color name="stroke">#FF3F3A4B</color>
+    <color name="dot_inactive">#FF3F3A4B</color>
+    <color name="screen_tint">#FF1D1728</color>
+    <color name="avatar_bg">#FF2A2533</color>
+    <color name="surface">#FF14101C</color>
+    <color name="on_surface">#FFF2EEF7</color>
+    <color name="text_muted">#FF9AA0AE</color>
+    <color name="disabled_primary">#668E5FD1</color>
+</resources>

@@ -8,6 +8,7 @@ import coil.disk.DiskCache
 import coil.memory.MemoryCache
 import ru.mtuci.drivenext.di.AppContainer
 import ru.mtuci.drivenext.di.ViewModelFactory
+import ru.mtuci.drivenext.presentation.common.apply
 
 class DriveNextApp : Application(), ImageLoaderFactory {
     lateinit var container: AppContainer
@@ -16,6 +17,8 @@ class DriveNextApp : Application(), ImageLoaderFactory {
     override fun onCreate() {
         super.onCreate()
         container = AppContainer(this)
+        // Сохранённая тема применяется до показа первого экрана
+        container.appSettings.getThemeMode().apply()
     }
 
     /**
