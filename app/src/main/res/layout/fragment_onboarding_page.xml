@@ -37,7 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
-        android:textColor="@color/black"
+        android:textColor="@color/on_surface"
         android:textSize="24sp"
         android:textFontWeight="600"
         app:layout_constraintEnd_toEndOf="parent"
