@@ -27,6 +27,9 @@ interface Navigator {
 
     fun openBookings()
 
+    /** «Помощь»: частые вопросы и связь с поддержкой. */
+    fun openHelp()
+
     /** Список броней после успешного оформления: домой, затем «Мои бронирования» поверх. */
     fun openBookingsAfterSuccess()
 

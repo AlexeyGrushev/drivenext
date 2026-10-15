@@ -12,6 +12,7 @@ import ru.mtuci.drivenext.appViewModelFactory
 import ru.mtuci.drivenext.databinding.FragmentSettingsBinding
 import ru.mtuci.drivenext.domain.model.ThemeMode
 import ru.mtuci.drivenext.presentation.common.apply
+import ru.mtuci.drivenext.presentation.common.copyToClipboard
 import ru.mtuci.drivenext.presentation.common.launchOnStarted
 import ru.mtuci.drivenext.presentation.Navigator
 import ru.mtuci.drivenext.presentation.main.MainNavigator
@@ -30,7 +31,12 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         // Тема, уведомления, помощь и приглашение — разделы следующих версий
         binding.themeRow.setOnClickListener { showThemeDialog(binding) }
         binding.themeValue.setText(themeTitle(viewModel.themeMode))
-        listOf(binding.notificationsRow, binding.helpRow, binding.inviteRow).forEach { row ->
+        binding.helpRow.setOnClickListener { (requireActivity() as Navigator).openHelp() }
+        binding.inviteRow.setOnClickListener {
+            copyToClipboard(getString(R.string.invite_link))
+            Snackbar.make(binding.root, R.string.invite_link_copied, Snackbar.LENGTH_SHORT).show()
+        }
+        listOf(binding.notificationsRow).forEach { row ->
             row.setOnClickListener { Snackbar.make(binding.root, R.string.coming_soon, Snackbar.LENGTH_SHORT).show() }
         }
 
