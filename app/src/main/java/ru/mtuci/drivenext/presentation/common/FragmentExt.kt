@@ -28,3 +28,9 @@ fun Fragment.launchOnStarted(block: suspend CoroutineScope.() -> Unit) {
         viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED, block)
     }
 }
+
+/** Кладёт текст в буфер обмена. */
+fun Fragment.copyToClipboard(text: String) {
+    val clipboard = requireContext().getSystemService(android.content.ClipboardManager::class.java)
+    clipboard.setPrimaryClip(android.content.ClipData.newPlainText(text, text))
+}
