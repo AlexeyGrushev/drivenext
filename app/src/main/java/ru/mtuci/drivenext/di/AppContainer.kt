@@ -2,6 +2,7 @@ package ru.mtuci.drivenext.di
 
 import android.content.Context
 import ru.mtuci.drivenext.BuildConfig
+import ru.mtuci.drivenext.data.local.AppSettingsRepositoryImpl
 import ru.mtuci.drivenext.data.local.OnboardingRepositoryImpl
 import ru.mtuci.drivenext.data.local.room.AppDatabase
 import ru.mtuci.drivenext.data.network.NetworkCheckerImpl
@@ -14,6 +15,7 @@ import ru.mtuci.drivenext.data.repository.FavoritesRepositoryImpl
 import ru.mtuci.drivenext.data.repository.CarRepositoryImpl
 import ru.mtuci.drivenext.data.repository.ProfileRepositoryImpl
 import ru.mtuci.drivenext.data.repository.SessionRepositoryImpl
+import ru.mtuci.drivenext.domain.repository.AppSettingsRepository
 import ru.mtuci.drivenext.domain.repository.AuthRepository
 import ru.mtuci.drivenext.domain.repository.BookingRepository
 import ru.mtuci.drivenext.domain.repository.CarRepository
@@ -51,6 +53,7 @@ class AppContainer(context: Context) {
 
     private val networkChecker: NetworkChecker = NetworkCheckerImpl(appContext)
     val onboardingRepository: OnboardingRepository = OnboardingRepositoryImpl(appContext)
+    val appSettings: AppSettingsRepository = AppSettingsRepositoryImpl(appContext)
     private val authRepository: AuthRepository = AuthRepositoryImpl(supabaseProvider)
     private val sessionRepository: SessionRepository = SessionRepositoryImpl(authRepository)
     private val profileRepository: ProfileRepository =
