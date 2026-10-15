@@ -306,6 +306,8 @@
     <string name="add_car_description_hint">Пожалуйста, добавьте дополнительную информацию о вашем автомобиле, которая может быть интересна арендатору. Например, о внутреннем оформлении, мощности и других особенностях вашего автомобиля.</string>
     <string name="add_car_submit">Отправить</string>
     <string name="add_car_error_year">Введите корректный год выпуска.</string>
+    <string name="add_car_price_hint">Цена за день, ₽</string>
+    <string name="add_car_error_price">Введите цену за день числом от 1 до 1 000 000.</string>
     <string name="add_car_error_mileage">Введите пробег числом.</string>
     <string name="transmission_at">Автомат (A/T)</string>
     <string name="transmission_mt">Механика (M/T)</string>

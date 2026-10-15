@@ -19,8 +19,12 @@ sealed interface AddCarEvent {
     data class Error(val message: String) : AddCarEvent
 }
 
-data class InfoErrors(val yearInvalid: Boolean = false, val mileageInvalid: Boolean = false) {
-    val hasErrors get() = yearInvalid || mileageInvalid
+data class InfoErrors(
+    val yearInvalid: Boolean = false,
+    val mileageInvalid: Boolean = false,
+    val priceInvalid: Boolean = false,
+) {
+    val hasErrors get() = yearInvalid || mileageInvalid || priceInvalid
 }
 
 /**
@@ -43,6 +47,7 @@ class AddCarViewModel(
     var model = ""
     var transmission: String? = null
     var mileage = ""
+    var price = ""
     var description = ""
 
     private var createdCarId: Long? = null
@@ -64,6 +69,7 @@ class AddCarViewModel(
         model = ""
         transmission = null
         mileage = ""
+        price = ""
         description = ""
         createdCarId = null
         _photos.value = emptyList()
@@ -76,6 +82,7 @@ class AddCarViewModel(
         return InfoErrors(
             yearInvalid = y == null || year.length != 4 || y !in MIN_YEAR..maxYear,
             mileageInvalid = mileage.toIntOrNull()?.let { it < 0 } ?: true,
+            priceInvalid = price.toIntOrNull()?.let { it !in 1..MAX_PRICE } ?: true,
         )
     }
 
@@ -91,6 +98,7 @@ class AddCarViewModel(
             model = model,
             transmission = code,
             mileage = mileage.toInt(),
+            pricePerDay = price.toInt(),
             description = description,
         )
         viewModelScope.launch {
@@ -138,5 +146,6 @@ class AddCarViewModel(
     companion object {
         const val MAX_PHOTOS = 5
         private const val MIN_YEAR = 1950
+        private const val MAX_PRICE = 1_000_000
     }
 }

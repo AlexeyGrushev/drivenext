@@ -33,6 +33,7 @@ class AddCarInfoFragment : Fragment(R.layout.fragment_add_car_info) {
         binding.brandInput.setText(viewModel.brand)
         binding.modelInput.setText(viewModel.model)
         binding.mileageInput.setText(viewModel.mileage)
+        binding.priceInput.setText(viewModel.price)
         binding.descriptionInput.setText(viewModel.description)
 
         binding.backButton.setOnClickListener {
@@ -68,11 +69,12 @@ class AddCarInfoFragment : Fragment(R.layout.fragment_add_car_info) {
 
         listOf(
             binding.yearInput, binding.brandInput, binding.modelInput,
-            binding.mileageInput, binding.descriptionInput,
+            binding.mileageInput, binding.priceInput, binding.descriptionInput,
         ).forEach { field ->
             field.doAfterTextChanged {
                 binding.yearLayout.error = null
                 binding.mileageLayout.error = null
+                binding.priceLayout.error = null
                 saveInput(binding)
                 updateButton(binding)
             }
@@ -84,6 +86,7 @@ class AddCarInfoFragment : Fragment(R.layout.fragment_add_car_info) {
             val errors = viewModel.validateInfo()
             binding.yearLayout.error = if (errors.yearInvalid) getString(R.string.add_car_error_year) else null
             binding.mileageLayout.error = if (errors.mileageInvalid) getString(R.string.add_car_error_mileage) else null
+            binding.priceLayout.error = if (errors.priceInvalid) getString(R.string.add_car_error_price) else null
             if (!errors.hasErrors) viewModel.submitInfo()
         }
 
@@ -106,6 +109,7 @@ class AddCarInfoFragment : Fragment(R.layout.fragment_add_car_info) {
         viewModel.brand = binding.brandInput.text.toString().trim()
         viewModel.model = binding.modelInput.text.toString().trim()
         viewModel.mileage = binding.mileageInput.text.toString().trim()
+        viewModel.price = binding.priceInput.text.toString().trim()
         viewModel.description = binding.descriptionInput.text.toString().trim()
     }
 
@@ -116,6 +120,7 @@ class AddCarInfoFragment : Fragment(R.layout.fragment_add_car_info) {
             viewModel.model.isNotBlank() &&
             viewModel.transmission != null &&
             viewModel.mileage.isNotBlank() &&
+            viewModel.price.isNotBlank() &&
             viewModel.description.isNotBlank()
     }
 

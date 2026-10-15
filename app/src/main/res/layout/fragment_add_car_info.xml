@@ -153,6 +153,22 @@
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceLayout"
+                style="@style/Widget.DriveNext.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/priceInput"
+                    style="@style/Widget.DriveNext.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_car_price_hint"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 style="@style/TextAppearance.DriveNext.Label"
                 android:layout_width="wrap_content"

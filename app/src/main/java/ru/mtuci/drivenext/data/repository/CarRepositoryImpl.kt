@@ -70,7 +70,7 @@ class CarRepositoryImpl(
             val dto = CarInsertDto(
                 brand = car.brand.trim(),
                 model = car.model.trim(),
-                pricePerDay = DEFAULT_PRICE_PER_DAY,
+                pricePerDay = car.pricePerDay,
                 transmission = car.transmission,
                 fuel = DEFAULT_FUEL,
                 address = car.address.trim(),
@@ -114,7 +114,6 @@ class CarRepositoryImpl(
         const val BUCKET = "cars"
 
         // В макете нет поля цены, поэтому новому автомобилю назначается цена по умолчанию
-        const val DEFAULT_PRICE_PER_DAY = 2000
         const val DEFAULT_FUEL = "Бензин"
     }
 }

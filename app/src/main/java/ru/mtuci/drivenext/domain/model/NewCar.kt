@@ -8,5 +8,6 @@ data class NewCar(
     val model: String,
     val transmission: String,
     val mileage: Int,
+    val pricePerDay: Int,
     val description: String,
 )
