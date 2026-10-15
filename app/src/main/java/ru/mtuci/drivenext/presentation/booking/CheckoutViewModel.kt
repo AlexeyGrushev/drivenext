@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import ru.mtuci.drivenext.domain.model.Car
 import ru.mtuci.drivenext.domain.pricing.RentalQuote
+import ru.mtuci.drivenext.domain.repository.Notifier
 import ru.mtuci.drivenext.domain.usecase.CreateBookingUseCase
 import ru.mtuci.drivenext.domain.usecase.GetCarUseCase
 
@@ -33,6 +34,7 @@ data class CheckoutUiState(
 class CheckoutViewModel(
     private val getCar: GetCarUseCase,
     private val createBooking: CreateBookingUseCase,
+    private val notifier: Notifier,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(CheckoutUiState())
@@ -67,7 +69,10 @@ class CheckoutViewModel(
         _state.update { it.copy(isSubmitting = true) }
         viewModelScope.launch {
             createBooking(car, current.start, current.end)
-                .onSuccess { _state.update { it.copy(isSubmitting = false, booked = true) } }
+                .onSuccess {
+                    notifier.bookingCreated(car.title, current.start, current.end)
+                    _state.update { it.copy(isSubmitting = false, booked = true) }
+                }
                 .onFailure { e -> _state.update { it.copy(isSubmitting = false, submitError = e.message) } }
         }
     }
